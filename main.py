@@ -3,7 +3,7 @@ Author: Adam Frederick
 Date: 2026-02-23
 Project: Getting a weather forecast from NWS
 """
-import requests
+
 import forecast_extract
 import forecast_map
 
