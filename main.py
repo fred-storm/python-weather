@@ -9,5 +9,6 @@ import forecast_map
 
 
 forecast_extract.extract_forecast()
+# print(forecast_extract.extract_forecast())
 forecast_map.map_scrapper()
 

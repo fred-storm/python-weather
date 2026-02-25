@@ -23,9 +23,13 @@ local_forecast = response.json()
 data_props = local_forecast["properties"]
 # data_props is a list type; periods in data_props is a dictionary with keys.
 def extract_forecast():
+    text_forecast: dict = {}
     for i in data_props["periods"]:
-        print(f'Forecast Period:{i["number"]}\nForecast:{i["detailedForecast"]}')
-    return
+        period = i["name"]
+        df = i["detailedForecast"]
+        text_forecast[period] = df
+        print(f'{i["name"]} - {i["detailedForecast"]}\n')
+    return text_forecast
 
 
 
